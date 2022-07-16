@@ -83,8 +83,11 @@ variable "pm_vm_sshkeys" {
   ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL5z4HQz55B+OOhiWGmb82sLDBHeqJFUbesQ5n045O0J
   EOF
 }
-variable "pm_vm_desc" {
+variable "github_actor" {
   description = "Proxmox guest description"
+}
+variable "github_update_at" {
+  description = "Time of last update"
 }
 variable "pm_api_url" {
   description = "Proxmox API endpoint URL"
