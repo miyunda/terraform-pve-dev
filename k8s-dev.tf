@@ -21,7 +21,7 @@ resource "proxmox_vm_qemu" "pve-tf" {
   memory      = var.pm_vm_memory
   scsihw      = var.pm_vm_scsihw
   bootdisk    = var.pm_vm_bootdisk
-  desc        = "Built by: ${github.actor}"
+  desc        = "Built by " $GITHUB_ACTOR
   disk {
     size    = var.pm_vm_disk_size
     type    = var.pm_vm_disk_type
