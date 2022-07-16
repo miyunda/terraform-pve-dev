@@ -49,8 +49,8 @@ variable "pm_vm_bootdisk" {
 }
 variable "pm_vm_disk_size" {
   description = "Proxmox guest disk size"
-  type        = number
-  default     = "8"
+  type        = string
+  default     = "8G"
 }
 variable "pm_vm_disk_type" {
   description = "Proxmox guest disk type"
