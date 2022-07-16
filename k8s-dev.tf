@@ -7,7 +7,7 @@ terraform {
 }
 
 resource "proxmox_vm_qemu" "pve-tf" {
-  count       = 1
+  count       = 0
   agent       = var.pm_agent_enabled
   vmid        = 301 + count.index
   name        = "k8s-dev-0${1 + count.index}"
