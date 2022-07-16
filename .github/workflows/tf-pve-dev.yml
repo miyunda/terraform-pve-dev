@@ -19,7 +19,7 @@ jobs:
       TF_VAR_pm_api_token_secret: ${{ secrets.TF_VAR_PM_API_TOKEN_SECRET }}
       TF_VAR_pm_api_url: ${{ secrets.TF_VAR_PM_API_URL }}
       TF_VAR_github_actor: ${{ github.actor }}
-      TF_VAR_github_update_at: ${{ github.event.repository.updated_at }}
+      TF_VAR_github_updated_at: ${{ github.event.repository.updated_at }}
 
     steps:
       - name: Checkout

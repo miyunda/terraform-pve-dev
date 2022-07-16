@@ -86,7 +86,7 @@ variable "pm_vm_sshkeys" {
 variable "github_actor" {
   description = "Proxmox guest description"
 }
-variable "github_update_at" {
+variable "github_updated_at" {
   description = "Time of last update"
 }
 variable "pm_api_url" {
