@@ -7,7 +7,7 @@ terraform {
 }
 
 resource "proxmox_vm_qemu" "pve-tf" {
-  count       = 0
+  count       = 1
   agent       = var.pm_agent_enabled
   vmid        = 301 + count.index
   name        = "k8s-dev-0${1 + count.index}"
@@ -21,6 +21,7 @@ resource "proxmox_vm_qemu" "pve-tf" {
   memory      = var.pm_vm_memory
   scsihw      = var.pm_vm_scsihw
   bootdisk    = var.pm_vm_bootdisk
+  desc        = "Built by: ${github.actor}"
   disk {
     size    = var.pm_vm_disk_size
     type    = var.pm_vm_disk_type
